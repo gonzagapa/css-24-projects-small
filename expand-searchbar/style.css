@@ -1,3 +1,13 @@
+/* To make the placeholder more visible */
+::-moz-placeholder {
+  color: #333;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #333;
+}
+
 html,
 body {
   margin: 0;
@@ -14,13 +24,31 @@ body {
   width: 70%;
   margin-inline: auto;
   display: flex;
+  align-items: center;
+}
+
+/* hide elements */
+.hiden {
+  clip-path: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
 }
 input[type="search"] {
   width: calc(100% / 3);
   padding-block: 0.5em;
   border: 1px solid var(--search-border);
   border-radius: 5px;
+  outline-offset: 1px; /* draw the outline line beyond the border edge */
   transition: 0.5s linear all 3ms;
+
+  &::placeholder {
+    font-weight: 200;
+  }
 
   &:focus {
     outline: 1px solid var(--search-focus-border);
@@ -28,7 +56,6 @@ input[type="search"] {
     flex-grow: 1;
     &::placeholder {
       opacity: 0;
-      /* TODO: search an accesible way to hide placeholder when the input has a focus state */
     }
   }
 }
