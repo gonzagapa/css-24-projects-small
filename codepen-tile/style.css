@@ -54,14 +54,14 @@ li {
   min-height: 100dvh;
   display: grid;
   place-content: center;
+  place-items: center;
   background-color: var(--bg-main);
   font-family: "Noto Sans", sans-serif;
 }
 
 .card {
-  width: 95%;
-  max-width: 450px;
-  min-width: 250px;
+  max-width: 320px;
+  min-width: 280px;
   background-color: var(--bg-card);
   border-radius: var(--border-radius);
   padding: 1em;
@@ -70,7 +70,7 @@ li {
   cursor: pointer;
 
   display: grid;
-  row-gap: 0.8em;
+  row-gap: 1em;
 
   &:is(:hover) .card-stats {
     display: flex;
@@ -115,10 +115,12 @@ li {
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 0.2em;
+    font-size: 1rem;
   }
   p {
     color: var(--username);
     margin-block: 0;
+    font-size: 0.85rem;
   }
 }
 
@@ -129,6 +131,3 @@ li {
   transition-behavior: allow-discrete;
   /* animate the display property */
 }
-
-/* TODO: make tweaks in the css styles */
-/* TODO: learn the article about responsive images */
