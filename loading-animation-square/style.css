@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: hsl(0, 61%, 64%);
+  --color-2: hsl(48, 76%, 64%);
+  --color-3: hsl(198, 63%, 51%);
+}
+
+.container {
+  display: flex;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.square {
+  --color: hsl(0, 61%, 64%);
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--color);
+  animation: rotate 1s 5s ease-in infinite;
+}
+.square:nth-child(2) {
+  --color: hsl(48, 76%, 64%);
+}
+
+.square:nth-child(3) {
+  --color: hsl(198, 63%, 51%);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(90deg);
+  }
+}
