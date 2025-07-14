@@ -2,9 +2,36 @@
   --color-light: lightgray;
   --color-dark: darkgray;
 }
-
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
   padding: 0;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
 }
+.container {
+  display: flex;
+  gap: 1rem;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: loading 1s ease-in infinite alternate both;
+}
+
+@keyframes loading {
+  from {
+    background-color: var(--color-dark);
+    transform: scale(0.9);
+  }
+  to {
+    background-color: var(--color-light);
+    transform: scale(1);
+  }
+}
+/* todo: read about animation in css */
