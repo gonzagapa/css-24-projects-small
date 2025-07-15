@@ -22,7 +22,7 @@
   height: 40px;
 
   background-color: var(--color);
-  animation: rotate 1s 5s ease-in infinite;
+  animation: rotate 5s 0s ease infinite;
 }
 .square:nth-child(2) {
   --color: hsl(48, 76%, 64%);
@@ -33,7 +33,19 @@
 }
 
 @keyframes rotate {
-  to {
-    transform: rotate(90deg);
+  20% {
+    transform: rotate(75deg);
+  }
+  40% {
+    transform: rotate(150deg);
+  }
+  60% {
+    transform: rotate(225deg);
+  }
+  80% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
